@@ -1,4 +1,4 @@
-package ordenacao.bubblesort;
+package ordenacao;
 
 import javax.swing.JOptionPane;
 

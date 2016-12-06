@@ -1,10 +1,10 @@
-package Arvore;
+package arvore;
 
 public class No {
 
-	int valor;
-	No esquerda;
-	No direita;
+	private int valor;
+	private No esquerda;
+	private No direita;
 
 	public No(int valor) {
 		this.valor = valor;
@@ -16,6 +16,15 @@ public class No {
 	public static void inserirElemento(int valor) {
 		inserirElemento(raiz, valor);
 
+	}
+
+	public void exibirRaiz() {
+		if (raiz == null) {
+			System.out.println("Arvóre vazia!");
+			return;
+		}
+
+		System.out.println("Raiz " + raiz.getValor());
 	}
 
 	public static void inserirElemento(No node, int valor) {
@@ -42,7 +51,8 @@ public class No {
 		}
 	}
 
-	public void posOrdem(No node) {
+
+		public void posOrdem(No node) {
 		if (node != null) {
 			posOrdem(node.esquerda);
 			posOrdem(node.direita);
@@ -75,6 +85,38 @@ public class No {
 		inserirElemento(6);
 
 		System.out.println();
+	}
+
+	public int getValor() {
+		return valor;
+	}
+
+	public void setValor(int valor) {
+		this.valor = valor;
+	}
+
+	public No getEsquerda() {
+		return esquerda;
+	}
+
+	public void setEsquerda(No esquerda) {
+		this.esquerda = esquerda;
+	}
+
+	public No getDireita() {
+		return direita;
+	}
+
+	public void setDireita(No direita) {
+		this.direita = direita;
+	}
+
+	public static No getRaiz() {
+		return raiz;
+	}
+
+	public static void setRaiz(No raiz) {
+		No.raiz = raiz;
 	}
 
 }

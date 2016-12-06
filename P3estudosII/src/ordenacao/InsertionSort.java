@@ -1,4 +1,4 @@
-package ordenacao.insertion.sort;
+package ordenacao;
 
 import javax.swing.JOptionPane;
 
